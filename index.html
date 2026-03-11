@@ -1,22 +1,39 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy - Seed App</title>
 </head>
-<body style="font-family: sans-serif; padding: 40px; line-height: 1.6;">
-    <h1>Privacy Policy</h1>
-    <p>Last updated: March 2026</p>
-    
-    <h2>1. Data Collection</h2>
-    <p>The Seed app is designed to work offline. We do not collect or store your personal vocabulary data on our own servers.</p>
+<body style="font-family: sans-serif; padding: 20px; max-width: 800px; margin: auto; line-height: 1.6; color: #333;">
+    <h1>Privacy Policy for Seed</h1>
+    <p><strong>Last updated: March 11, 2026</strong></p>
+    <p>This Privacy Policy describes how Seed  handles your information. By using the app, you agree to the terms described here.</p>
+
+    <hr>
+
+    <h2>1. Data Collection & Authentication</h2>
+    <p>Seed uses <strong>Firebase Authentication (Google OAuth)</strong> to manage user accounts. When you sign in, we collect your email address and a unique user ID to sync your vocabulary progress across devices.</p>
+    <p>Your vocabulary maps are stored in a secure database provided by Firebase. We do not sell this data to third parties.</p>
 
     <h2>2. AI Processing (Google Gemini)</h2>
-    <p>To categorize your vocabulary words, this app uses the Google Gemini API. When you stash a new word, that specific text is sent to Google's servers for processing. No personal identifiers (like your name or email) are sent with the word.</p>
+    <p>To categorize and organize your vocabulary, Seed uses the <strong>Google Gemini API</strong>. When you add a word, that specific text is sent to Google's servers for processing. This data is sent without personal identifiers (like your email or name).</p>
 
     <h2>3. Third-Party Services</h2>
-    <p>We use the Pixabay API to provide images for level nodes. No user data is shared with Pixabay.</p>
+    <ul>
+        <li><strong>Pixabay API:</strong> Used to provide images for level nodes. No user data is shared with Pixabay.</li>
+        <li><strong>Google Play Billing:</strong> Used to process "Gem" purchases. We do not see or store your credit card information; it is handled entirely by Google.</li>
+    </ul>
 
-    <h2>4. Contact</h2>
-    <p>If you have questions, contact us via the support link in the app.</p>
+    <h2 style="color: #d9534f;" id="deletion">4. Account Deletion & Data Retention</h2>
+    <p>Google Play requires that users have a clear way to delete their accounts. If you wish to delete your Seed account and all associated data (including your vocabulary maps and email record), you can do so by:</p>
+    <ul>
+        <li><strong>In-App:</strong> Going to Settings > Delete Account.</li>
+        <li><strong>Via Email:</strong> Sending a request to <strong>[alexeyg2006@gmail.com]</strong> with the subject "Account Deletion Request".</li>
+    </ul>
+    <p>Once requested, your account and all associated vocabulary data will be permanently deleted from our Firebase servers within 48 hours.</p>
+
+    <h2>5. Contact Us</h2>
+    <p>If you have any questions about this policy or your data, please contact Aleksei Goncharov at <strong>[alexeyg2006@gmail.com]</strong>.</p>
 </body>
 </html>
