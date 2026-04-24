@@ -29,6 +29,7 @@
             border: 1px solid #ddd;
             padding: 12px;
             text-align: left;
+            vertical-align: top;
         }
         th { background-color: #f8f9fa; }
         hr { border: 0; border-top: 1px solid #eee; margin: 30px 0; }
@@ -38,8 +39,8 @@
 <body>
 
     <h1>Privacy Policy for Seed</h1>
-    <p><strong>Last updated: April 14, 2026</strong></p>
-    <p>This Privacy Policy describes how the mobile application "Seed" (the "App"), provided by Alexey G ("we", "us", "our"), collects, uses, and shares information about you when you use the App.</p>
+    <p><strong>Last updated: April 24, 2026</strong></p>
+    <p>This Privacy Policy explains how the mobile application "Seed" (the "App"), provided by Alexey G ("we", "us", "our"), collects, uses, stores, and shares information when you use the App.</p>
     <p>Contact: <span class="contact-email">alexeyg2006@gmail.com</span></p>
 
     <hr>
@@ -48,19 +49,22 @@
 
     <h3>1.1 Information You Provide Directly</h3>
     <ul>
-        <li><strong>Account information.</strong> When you sign up, we collect your email address, a display name (nickname), and a password hash (if using email/password sign-in). If you sign in with Google, Facebook, or Google Play Games, we receive your name, email, and a profile identifier from those providers.</li>
-        <li><strong>Profile preferences.</strong> Your chosen interface language, content (learning) language, daily goal, and dark-mode preference.</li>
-        <li><strong>Your learning activity.</strong> Words you have learned, reviewed, or marked as ignored; level progress; daily streaks; achievements; quest progress; and inventory of in-app items.</li>
-        <li><strong>User-generated content.</strong> A nickname you choose. This nickname may be visible to other users in leaderboards or social features if present.</li>
-        <li><strong>Microphone audio.</strong> When you use the speaking-practice feature, your microphone is activated and your speech is processed <strong>on-device</strong> via Google's speech-to-text engine for pronunciation matching. <strong>Audio recordings are not uploaded, stored, or shared.</strong> Only the recognized text result is used locally to evaluate your answer and is not sent to our servers.</li>
+        <li><strong>Account information.</strong> When you create an account or sign in, we collect information such as your email address, nickname, authentication provider, and Firebase user ID. If you use email/password sign-in, your credentials are processed by Firebase Authentication on our behalf.</li>
+        <li><strong>Profile and settings.</strong> We store settings such as your interface language, learning language, daily goal, theme preference, reminder time, and related profile preferences.</li>
+        <li><strong>Learning and progress data.</strong> We store data needed to run the App, such as your words, topics, review history, streaks, achievements, quests, in-app currency, premium status, and similar progress data.</li>
+        <li><strong>Imported or pasted content.</strong> If you paste text or choose files to import (such as <code>.txt</code>, <code>.csv</code>, <code>.doc</code>, or <code>.docx</code>), the App reads that content so it can extract words, build learning lists, or generate study content from it.</li>
+        <li><strong>AI and translation requests.</strong> When you use AI-generated features or translation features, the App sends the text you choose to process (for example words, phrases, topic names, or imported snippets) together with language settings. We do not intentionally include profile fields such as your email address or nickname in those content prompts.</li>
+        <li><strong>Microphone input.</strong> If you use speaking practice, the App accesses your microphone while that feature is active. Seed does not store raw audio recordings or upload raw microphone recordings to our own servers. Speech recognition may be handled by your device or platform speech-recognition provider under that provider's own terms.</li>
+        <li><strong>Support requests.</strong> If you contact us, we collect the information you include in your message.</li>
     </ul>
 
     <h3>1.2 Information Collected Automatically</h3>
     <ul>
-        <li><strong>Crash and diagnostic data.</strong> When the App crashes or encounters an error, Firebase Crashlytics automatically collects a stack trace, device model, OS version, and app version to help us diagnose and fix issues. No personal content is included.</li>
-        <li><strong>Advertising identifiers.</strong> If advertisements are shown, Google AdMob may access your device's advertising ID (a resettable identifier) to serve relevant ads. You can reset or disable this ID in your device settings (Android → Settings → Google → Ads).</li>
-        <li><strong>Device and app information.</strong> Package version, device locale, timezone, and connectivity status — used for feature compatibility and sync.</li>
-        <li><strong>Purchase information.</strong> If you purchase in-app items via Google Play Billing, Google Play provides us a purchase token and SKU so we can grant the purchased item. We do NOT receive or store your credit card details; all payment processing is handled by Google Play.</li>
+        <li><strong>Device and app information.</strong> We may collect device model, OS version, app version, locale, timezone, and connectivity-related information needed to run the App and keep data in sync.</li>
+        <li><strong>Crash and diagnostics data.</strong> Firebase Crashlytics collects crash reports and related diagnostics such as stack traces, device model, OS version, and app version.</li>
+        <li><strong>Notification data.</strong> If you enable reminders or notifications, we may store your Firebase Cloud Messaging token, timezone, and reminder settings so we can send reminder notifications.</li>
+        <li><strong>Advertising and consent data.</strong> If ads are shown, Google AdMob and Google's consent tools may process your advertising ID, consent choices, and ad interaction data. Google may also infer approximate location from IP address for ads, fraud prevention, or legal compliance.</li>
+        <li><strong>Purchase data.</strong> If you make purchases or subscriptions, RevenueCat and Google Play may process your app user ID, product identifiers, entitlement status, purchase token, and transaction status. We do not receive your full payment card details.</li>
     </ul>
 
     <hr>
@@ -80,101 +84,130 @@
         <tbody>
             <tr>
                 <td>Firebase Authentication</td>
-                <td>Sign-in (email/password, Google, Facebook, Play Games)</td>
-                <td>Email, display name, user ID</td>
-                <td><a href="https://policies.google.com/privacy" target="_blank">policies.google.com/privacy</a></td>
+                <td>Account creation and sign-in</td>
+                <td>Email address, auth provider data, user ID</td>
+                <td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">policies.google.com/privacy</a></td>
             </tr>
             <tr>
                 <td>Cloud Firestore</td>
-                <td>Sync your profile, progress, streaks, achievements, and settings across devices</td>
-                <td>Profile data, learning progress, preferences</td>
-                <td><a href="https://policies.google.com/privacy" target="_blank">policies.google.com/privacy</a></td>
+                <td>Store and sync profiles, settings, progress, reminder preferences, and app state</td>
+                <td>Profile data, learning progress, settings, reminder data</td>
+                <td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">policies.google.com/privacy</a></td>
+            </tr>
+            <tr>
+                <td>Firebase Cloud Messaging</td>
+                <td>Deliver push reminders and notifications</td>
+                <td>Device/app instance data, FCM token, notification delivery data</td>
+                <td><a href="https://firebase.google.com/support/privacy/" target="_blank" rel="noopener noreferrer">firebase.google.com/support/privacy</a></td>
             </tr>
             <tr>
                 <td>Firebase Crashlytics</td>
                 <td>Crash reporting and diagnostics</td>
-                <td>Stack traces, device model, OS version, app version</td>
-                <td><a href="https://firebase.google.com/support/privacy" target="_blank">firebase.google.com/support/privacy</a></td>
+                <td>Crash logs, stack traces, device/app details</td>
+                <td><a href="https://firebase.google.com/support/privacy/" target="_blank" rel="noopener noreferrer">firebase.google.com/support/privacy</a></td>
             </tr>
             <tr>
                 <td>Firebase Remote Config</td>
-                <td>Feature flags and configuration</td>
-                <td>App version, installation ID</td>
-                <td><a href="https://firebase.google.com/support/privacy" target="_blank">firebase.google.com/support/privacy</a></td>
+                <td>Feature flags, update messages, remote app configuration</td>
+                <td>Installation/app instance data, app version</td>
+                <td><a href="https://firebase.google.com/support/privacy/" target="_blank" rel="noopener noreferrer">firebase.google.com/support/privacy</a></td>
+            </tr>
+            <tr>
+                <td>Firebase App Check / Google Play Integrity</td>
+                <td>Protect backend services from abuse and unauthorized app access</td>
+                <td>App/device attestation and integrity signals</td>
+                <td><a href="https://firebase.google.com/docs/app-check" target="_blank" rel="noopener noreferrer">firebase.google.com/docs/app-check</a></td>
+            </tr>
+            <tr>
+                <td>Firebase AI / Gemini</td>
+                <td>Generate study content on demand</td>
+                <td>Text you submit for generation, language settings</td>
+                <td><a href="https://firebase.google.com/support/privacy/" target="_blank" rel="noopener noreferrer">firebase.google.com/support/privacy</a></td>
+            </tr>
+            <tr>
+                <td>Google Cloud Translation API</td>
+                <td>Translate words, phrases, and imported content</td>
+                <td>Text you choose to translate, language settings</td>
+                <td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">policies.google.com/privacy</a></td>
+            </tr>
+            <tr>
+                <td>Pixabay</td>
+                <td>Search and load images for words or topics</td>
+                <td>Search terms such as word/topic names; image requests may include IP/device metadata</td>
+                <td><a href="https://pixabay.com/service/privacy/" target="_blank" rel="noopener noreferrer">pixabay.com/service/privacy</a></td>
             </tr>
             <tr>
                 <td>Google AdMob</td>
-                <td>Rewarded video advertisements</td>
-                <td>Advertising ID, coarse location (if permitted), ad interaction events</td>
-                <td><a href="https://support.google.com/admob/answer/6128543" target="_blank">support.google.com/admob/answer/6128543</a></td>
+                <td>Show rewarded ads and related ad services</td>
+                <td>Advertising ID, ad interaction data, approximate location inferred by Google from IP</td>
+                <td><a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener noreferrer">support.google.com/admob/answer/6128543</a></td>
             </tr>
             <tr>
-                <td>Facebook SDK</td>
-                <td>Facebook sign-in and SDK telemetry</td>
-                <td>Email, name, Facebook user ID, device identifiers</td>
-                <td><a href="https://www.facebook.com/privacy/policy" target="_blank">facebook.com/privacy/policy</a></td>
+                <td>Google User Messaging Platform (UMP)</td>
+                <td>Collect ad-consent choices where required</td>
+                <td>Consent status, region information</td>
+                <td><a href="https://support.google.com/admob/answer/10113207" target="_blank" rel="noopener noreferrer">support.google.com/admob/answer/10113207</a></td>
             </tr>
             <tr>
-                <td>Google Play Games Services</td>
-                <td>Play Games sign-in and player identification</td>
-                <td>Player ID</td>
-                <td><a href="https://policies.google.com/privacy" target="_blank">policies.google.com/privacy</a></td>
+                <td>RevenueCat</td>
+                <td>Manage purchases, subscriptions, and entitlements</td>
+                <td>App user ID, product IDs, purchase and entitlement history</td>
+                <td><a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener noreferrer">revenuecat.com/privacy</a></td>
             </tr>
             <tr>
                 <td>Google Play Billing</td>
-                <td>Process in-app purchases</td>
-                <td>Purchase token, product ID (SKU), transaction status</td>
-                <td><a href="https://policies.google.com/privacy" target="_blank">policies.google.com/privacy</a></td>
+                <td>Process Android purchases</td>
+                <td>Purchase token, product ID, transaction status</td>
+                <td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">policies.google.com/privacy</a></td>
             </tr>
             <tr>
-                <td>speech_to_text (on-device)</td>
-                <td>Pronunciation matching for speaking practice</td>
-                <td>Audio processed locally, never uploaded</td>
-                <td>Google Speech Services (on-device)</td>
-            </tr>
-            <tr>
-                <td>flutter_local_notifications</td>
-                <td>Schedule local daily learning reminders</td>
-                <td>None (all scheduled on-device)</td>
-                <td>N/A</td>
+                <td>Google Fonts</td>
+                <td>May fetch app font files and cache them on-device</td>
+                <td>IP address and request headers needed to serve font files</td>
+                <td><a href="https://developers.google.com/fonts/faq/privacy" target="_blank" rel="noopener noreferrer">developers.google.com/fonts/faq/privacy</a></td>
             </tr>
         </tbody>
     </table>
 
-    <p>We do <strong>not</strong> sell your personal data to any third party.</p>
+    <p>We do <strong>not</strong> sell your personal data.</p>
 
     <hr>
 
     <h2>3. How We Use Your Information</h2>
     <ul>
-        <li>To provide and operate the App (sign-in, sync your progress, unlock content).</li>
-        <li>To personalize your learning experience (adaptive word review, progress-based level unlocking).</li>
-        <li>To deliver in-app advertisements (via Google AdMob) and in-app purchases (via Google Play Billing).</li>
-        <li>To send you optional local reminder notifications if you enable them.</li>
-        <li>To diagnose crashes and improve stability.</li>
-        <li>To communicate with you about your account (support requests, account deletion confirmations).</li>
+        <li>To operate the App and keep you signed in.</li>
+        <li>To sync your profile, progress, and settings across devices.</li>
+        <li>To personalize your learning experience.</li>
+        <li>To translate text and generate study content you request.</li>
+        <li>To process imported content you choose to use in the App.</li>
+        <li>To send optional push reminders and notifications if you enable them.</li>
+        <li>To show ads according to your consent choices where required.</li>
+        <li>To process purchases, subscriptions, and premium access.</li>
+        <li>To diagnose crashes, prevent abuse, and improve reliability.</li>
+        <li>To respond to support, privacy, and account-deletion requests.</li>
     </ul>
 
     <hr>
 
     <h2>4. Permissions the App Requests</h2>
     <ul>
-        <li><strong>Internet</strong> — to sync your data to our servers.</li>
-        <li><strong>Network state</strong> — to detect online/offline status.</li>
-        <li><strong>Post notifications</strong> — (Android 13+) to show local daily learning reminders. You can deny this without breaking the rest of the App.</li>
-        <li><strong>Record audio</strong> — (only when you use the speaking practice feature) — audio is processed entirely on-device and never uploaded or stored.</li>
-        <li><strong>Exact alarms</strong> — to deliver daily reminders at the time you choose.</li>
-        <li><strong>Billing</strong> — to process in-app purchases.</li>
+        <li><strong>Internet</strong> - to connect to Firebase, translation services, image services, ads, and purchase services.</li>
+        <li><strong>Access network state</strong> - to adapt behavior based on connectivity.</li>
+        <li><strong>Post notifications</strong> - to send reminders and other notifications. You can deny this and still use the core App.</li>
+        <li><strong>Record audio</strong> - only when you use the speaking practice feature.</li>
+        <li><strong>Billing</strong> - to support purchases and subscriptions.</li>
     </ul>
+    <p>The Android build may also include supporting capabilities used by notification, messaging, and ads SDKs, such as vibration, wake locks, cloud-messaging delivery, and ad ID access. Seed does <strong>not</strong> request precise location permission.</p>
 
     <hr>
 
     <h2>5. Data Storage and Retention</h2>
     <ul>
-        <li><strong>Account data</strong> is stored in Google Cloud Firestore (Firebase) for the lifetime of your account.</li>
-        <li><strong>Local data</strong> (offline cache of your progress) is stored on your device using ObjectBox and SharedPreferences.</li>
-        <li><strong>Crash reports</strong> are retained by Firebase Crashlytics for up to 90 days.</li>
-        <li>When you delete your account (see Section 7), all account data stored by us is deleted within 48 hours, except where longer retention is legally required.</li>
+        <li><strong>Cloud data</strong> is stored in Firebase services for as long as your account remains active or as otherwise needed to provide the App.</li>
+        <li><strong>On-device data</strong> is stored on your device using tools such as ObjectBox, SharedPreferences, and image caches so the App can work faster and support offline use where available.</li>
+        <li><strong>Imported and generated content</strong> may be stored locally or in your account data when needed to provide the feature you used.</li>
+        <li><strong>Third-party processing</strong> of text sent to AI, translation, image, ads, purchase, and other providers is handled under those providers' own retention practices and terms.</li>
+        <li><strong>Deletion.</strong> If you delete your account, we aim to delete associated server-side account data within 48 hours unless a longer retention period is required by law or needed for fraud prevention, dispute handling, or legal compliance.</li>
     </ul>
 
     <hr>
@@ -182,55 +215,50 @@
     <h2>6. Data Sharing and Disclosure</h2>
     <p>We do not sell your personal information. We share data only as described in this policy:</p>
     <ul>
-        <li>With the third-party SDK providers listed in Section 2, as necessary for them to provide their service.</li>
-        <li>With law enforcement or government authorities, if legally required (e.g., valid court order).</li>
-        <li>In the event of a business transfer (merger, acquisition, sale of assets), your data may transfer as part of the transaction, and we will notify you if this happens.</li>
+        <li>With the third-party providers listed in Section 2, as needed to operate the App.</li>
+        <li>With law enforcement or government authorities, if legally required.</li>
+        <li>To protect the rights, safety, security, and integrity of Seed, our users, or others.</li>
+        <li>In the event of a business transfer such as a merger, acquisition, financing, or sale of assets.</li>
     </ul>
 
     <hr>
 
-    <h2>7. Your Rights (GDPR / Play Store Requirements)</h2>
-    <p>Under GDPR (for EU users), CCPA (California), and other privacy regulations, you have the right to:</p>
+    <h2>7. Your Choices and Rights</h2>
+    <p>Depending on where you live, you may have rights to access, correct, export, delete, or restrict the use of your personal data, and to withdraw consent for optional processing.</p>
     <ul>
-        <li><strong>Access your data</strong> — request a copy of all data we hold about you.</li>
-        <li><strong>Export your data (portability)</strong> — request your data in a machine-readable format (JSON).</li>
-        <li><strong>Correct your data</strong> — most profile fields are editable directly in the App (Settings screen).</li>
-        <li><strong>Delete your account</strong> — you may delete your account and all associated data either:
-            <ul>
-                <li><strong>In-app:</strong> Settings → Delete Account. Deletion is immediate for local data and completes within 48 hours for server-side data.</li>
-                <li><strong>By email:</strong> send a request to <strong>alexeyg2006@gmail.com</strong> with the subject "Delete Account". We will confirm and delete within 48 hours.</li>
-            </ul>
-        </li>
-        <li><strong>Withdraw consent</strong> — you can disable optional features (notifications, ads personalization) from your device settings.</li>
-        <li><strong>Lodge a complaint</strong> — EU users may file a complaint with their national Data Protection Authority.</li>
+        <li><strong>Manage notifications</strong> - you can change notification permission in your device settings.</li>
+        <li><strong>Manage ad settings</strong> - you can reset your advertising ID and manage ad-related settings on your device.</li>
+        <li><strong>Delete your account in-app</strong> - use <strong>Settings -> Delete Account</strong>.</li>
+        <li><strong>Contact us</strong> - email <strong>alexeyg2006@gmail.com</strong> to request access, correction, export, or deletion of your data.</li>
     </ul>
-    <p>To exercise any of these rights, contact us at <strong>alexeyg2006@gmail.com</strong>.</p>
+    <p>We aim to respond to privacy requests within 7 business days.</p>
 
     <hr>
 
     <h2>8. Children's Privacy</h2>
-    <p>The App is not intended for children under 13. We do not knowingly collect personal information from children under 13. If you are a parent or guardian and believe your child has provided us with personal data, please contact us and we will delete it promptly.</p>
+    <p>Seed is not intended for children under 13, and we do not knowingly collect personal information from children under 13. If you believe a child has provided personal data to us, please contact us and we will work to delete it.</p>
 
     <hr>
 
     <h2>9. International Data Transfers</h2>
-    <p>Your data may be processed on servers located outside your country of residence (typically in the United States or the European Union via Google Cloud). Firebase and Google services use standard contractual clauses where applicable to comply with GDPR transfer requirements.</p>
+    <p>Your information may be processed on servers located outside your country of residence, including in the United States or other countries where our service providers operate. When required, we rely on the safeguards offered by those providers under their applicable terms.</p>
 
     <hr>
 
     <h2>10. Security</h2>
-    <p>We use industry-standard security measures including:</p>
+    <p>We use reasonable technical and organizational measures to protect your information, including:</p>
     <ul>
-        <li><strong>Data Encryption in Transit:</strong> All data transferred between your device and our servers is encrypted using HTTPS/TLS.</li>
-        <li>Firebase's built-in encryption at rest.</li>
-        <li>Firestore security rules restricting each user's data to their own account.</li>
+        <li><strong>Encrypted connections:</strong> HTTPS/TLS for network traffic.</li>
+        <li>Provider-managed security features such as Firebase security controls and encryption at rest.</li>
+        <li>Access controls intended to limit data access to the correct user account.</li>
+        <li>Firebase App Check and related integrity checks to reduce abuse of our backend services.</li>
     </ul>
     <p>However, no method of electronic transmission or storage is 100% secure, and we cannot guarantee absolute security.</p>
 
     <hr>
 
     <h2>11. Changes to This Policy</h2>
-    <p>We may update this Privacy Policy from time to time. When we do, we will update the "Last updated" date at the top of this page. Material changes will be announced via an in-app notification. Continued use of the App after changes constitutes acceptance of the updated policy.</p>
+    <p>We may update this Privacy Policy from time to time. When we do, we will update the "Last updated" date at the top of this page. If changes are material, we may also provide notice inside the App.</p>
 
     <hr>
 
@@ -240,7 +268,7 @@
     <p>We aim to respond within 7 business days.</p>
 
     <hr>
-    <p><em>This policy was last updated on April 14, 2026.</em></p>
+    <p><em>This policy was last updated on April 24, 2026.</em></p>
 
 </body>
 </html>
