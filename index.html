@@ -41,7 +41,7 @@
 <body>
 
 <h1>Privacy Policy for Seed</h1>
-<p class="meta"><strong>Last updated: May 31, 2026</strong></p>
+<p class="meta"><strong>Last updated: June 12, 2026</strong></p>
 
 <p>This Privacy Policy explains how the mobile application "Seed" (the "App"), provided by <strong>Alex Goncharov</strong> ("we", "us", "our"), collects, uses, stores, and shares information when you use the App.</p>
 <p><strong>Contact:</strong> alexeyg2006@gmail.com</p>
@@ -54,7 +54,8 @@
 <ul>
   <li><strong>Account information.</strong> When you create an account or sign in, we collect information such as your email address, nickname, authentication provider, and Firebase user ID. If you use email/password sign-in, your credentials are processed by Firebase Authentication on our behalf.</li>
   <li><strong>Profile and settings.</strong> We store settings such as your interface language, learning language, daily goal, theme preference, reminder time, and related profile preferences.</li>
-  <li><strong>Learning and progress data.</strong> We store data needed to run the App, such as your words, topics, review history, streaks, achievements, quests, gem or emerald balance, virtual items, premium status, and similar progress data.</li>
+  <li><strong>Social profile and friends data.</strong> If you use social features, we store your public profile — your nickname, avatar selection, profile wall layout, and the word cards you choose to showcase — together with learning statistics shown on it (such as your level, learning language, streak, weekly and total XP, words learned, and cards collected). We also store your friends list, friend requests, and invite codes you create or redeem. See Section 6 for what is visible to other users.</li>
+  <li><strong>Learning and progress data.</strong> We store data needed to run the App, such as your words, topics, review history, streaks, achievements, quests, gem or emerald balance, virtual items, premium status, word cards and collection data (including card rarity, discovery numbers, chests opened, upgrade shards, and card upgrades), and similar progress data.</li>
   <li><strong>Imported or pasted content.</strong> If you paste text or choose files to import (such as .txt, .csv, .doc, or .docx), the App reads that content so it can extract words, build learning lists, or generate study content from it.</li>
   <li><strong>AI and translation requests.</strong> When you use AI-generated features or translation features, the App sends the text you choose to process (for example words, phrases, topic names, or imported snippets) together with language settings. We do not intentionally include profile fields such as your email address or nickname in those content prompts.</li>
   <li><strong>Microphone input.</strong> If you use speaking practice, the App accesses your microphone while that feature is active. Seed does not store raw audio recordings or upload raw microphone recordings to our own servers. Speech recognition may be handled by your device or platform speech-recognition provider under that provider's own terms.</li>
@@ -68,6 +69,7 @@
   <li><strong>Notification data.</strong> If you enable reminders or notifications, we may store your Firebase Cloud Messaging token, timezone, and reminder settings so we can send reminder notifications.</li>
   <li><strong>Advertising and consent data.</strong> If ads are shown, Google AdMob and Google's consent tools may process your advertising ID, consent choices, and ad interaction data. Google may also infer approximate location from IP address for ads, fraud prevention, or legal compliance.</li>
   <li><strong>Purchase and virtual currency data.</strong> If you make purchases or use virtual currency features, RevenueCat and Google Play may process your app user ID, product identifiers, entitlement status, purchase token, transaction status, and related purchase history. RevenueCat may also store virtual currency information, such as gem balances and transaction history, as part of your RevenueCat customer profile. We do not receive your full payment card details.</li>
+  <li><strong>Card discovery counters.</strong> Word-card discovery numbers are based on a global counter of how many users have collected a given word's card. This counter contains only word identifiers and counts — it does not include your name, nickname, email, or other personal information.</li>
 </ul>
 
 <hr>
@@ -94,8 +96,8 @@
     </tr>
     <tr>
       <td>Cloud Firestore</td>
-      <td>Store and sync profiles, settings, progress, reminder preferences, and app state</td>
-      <td>Profile data, learning progress, settings, reminder data</td>
+      <td>Store and sync profiles, settings, progress, word cards, social profiles, friends, reminder preferences, and app state</td>
+      <td>Profile data, learning progress, word-card collection, public social profile, friends data, settings, reminder data</td>
       <td><a href="https://policies.google.com/privacy">policies.google.com/privacy</a></td>
     </tr>
     <tr>
@@ -183,6 +185,8 @@
   <li>To operate the App and keep you signed in.</li>
   <li>To sync your profile, progress, and settings across devices.</li>
   <li>To personalize your learning experience.</li>
+  <li>To operate the word-card collection, chests, upgrades, and collection milestones.</li>
+  <li>To operate social features such as your public profile, profile wall, friends, friend requests, and invite codes.</li>
   <li>To translate text and generate study content you request.</li>
   <li>To process imported content you choose to use in the App.</li>
   <li>To send optional push reminders and notifications if you enable them.</li>
@@ -205,10 +209,11 @@
   <li><strong>Access network state</strong> — to adapt behavior based on connectivity.</li>
   <li><strong>Post notifications</strong> — to send reminders and other notifications. You can deny this and still use the core App.</li>
   <li><strong>Record audio</strong> — only when you use the speaking practice feature.</li>
+  <li><strong>Vibrate</strong> — for optional haptic feedback during interactions such as opening chests.</li>
   <li><strong>Billing</strong> — to support purchases and subscriptions.</li>
 </ul>
 
-<p>The Android build may also include supporting capabilities used by notification, messaging, and ads SDKs, such as vibration, wake locks, cloud-messaging delivery, and ad ID access. Seed does <strong>not</strong> request precise location permission.</p>
+<p>The Android build may also include supporting capabilities used by notification, messaging, and ads SDKs, such as wake locks, cloud-messaging delivery, and ad ID access. Seed does <strong>not</strong> request precise location permission.</p>
 
 <hr>
 
@@ -219,7 +224,7 @@
   <li><strong>On-device data</strong> is stored on your device using tools such as ObjectBox, SharedPreferences, and image caches so the App can work faster and support offline use where available.</li>
   <li><strong>Imported and generated content</strong> may be stored locally or in your account data when needed to provide the feature you used.</li>
   <li><strong>Third-party processing</strong> of text sent to AI, translation, image, ads, purchase, and other providers is handled under those providers' own retention practices and terms.</li>
-  <li><strong>Deletion.</strong> If you delete your account, we aim to delete associated server-side account data within 48 hours unless a longer retention period is required by law or needed for fraud prevention, dispute handling, or legal compliance.</li>
+  <li><strong>Deletion.</strong> If you delete your account, we aim to delete associated server-side account data — including your public social profile, friend connections, and word-card collection — within 48 hours unless a longer retention period is required by law or needed for fraud prevention, dispute handling, or legal compliance. Anonymous aggregate data, such as global card discovery counters, does not identify you and may be retained.</li>
 </ul>
 
 <hr>
@@ -234,6 +239,10 @@
   <li>In the event of a business transfer such as a merger, acquisition, financing, or sale of assets.</li>
 </ul>
 
+<h3>6.1 Information Visible to Other Users</h3>
+<p>If you use social features, your public profile is visible to other users of the App. This includes your <strong>nickname, avatar, profile wall, showcased word cards</strong>, and learning statistics such as your <strong>level, learning language, streak, weekly and total XP, words learned, and cards collected</strong>. Other users may see this information when they are your friends, when they redeem an invite code you shared, when they receive a friend request from you, or when they find your nickname through in-app search.</p>
+<p>Choose a nickname and showcase content you are comfortable sharing publicly. Do not put personal information (such as your real full name, contact details, or address) in your nickname. You can change your nickname, avatar, wall, and showcased cards at any time in the App, and deleting your account removes your public profile and friend connections as described in Section 5.</p>
+
 <hr>
 
 <h2>7. Your Choices and Rights</h2>
@@ -242,6 +251,7 @@
 <ul>
   <li><strong>Manage notifications</strong> — you can change notification permission in your device settings.</li>
   <li><strong>Manage ad settings</strong> — you can reset your advertising ID and manage ad-related settings on your device.</li>
+  <li><strong>Manage your public profile</strong> — you can edit your nickname, avatar, wall, and showcased cards in the App at any time.</li>
   <li><strong>Delete your account in-app</strong> — use <strong>Settings → Delete Account</strong>.</li>
   <li><strong>Contact us</strong> — email <strong>alexeyg2006@gmail.com</strong> to request access, correction, export, or deletion of your data.</li>
 </ul>
@@ -317,7 +327,7 @@
 <p><strong>Email:</strong> alexeyg2006@gmail.com</p>
 <p>We aim to respond within 7 business days.</p>
 
-<p class="updated">This policy was last updated on May 31, 2026.</p>
+<p class="updated">This policy was last updated on June 12, 2026.</p>
 
 </body>
 </html>
