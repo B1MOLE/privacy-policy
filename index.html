@@ -41,9 +41,9 @@
 <body>
 
 <h1>Privacy Policy for Seed</h1>
-<p class="meta"><strong>Last updated: June 12, 2026</strong></p>
+<p class="meta"><strong>Last updated: June 21, 2026</strong></p>
 
-<p>This Privacy Policy explains how the mobile application "Seed" (the "App"), provided by <strong>Alex Goncharov</strong> ("we", "us", "our"), collects, uses, stores, and shares information when you use the App.</p>
+<p>This Privacy Policy explains how the mobile application "Seed" (the "App"), provided by <strong>Alex Goncharov</strong> ("we", "us", "our"), collects, uses, stores, and shares information when you use the App on Android and iOS.</p>
 <p><strong>Contact:</strong> alexeyg2006@gmail.com</p>
 
 <hr>
@@ -52,13 +52,13 @@
 
 <h3>1.1 Information You Provide Directly</h3>
 <ul>
-  <li><strong>Account information.</strong> When you create an account or sign in, we collect information such as your email address, nickname, authentication provider, and Firebase user ID. If you use email/password sign-in, your credentials are processed by Firebase Authentication on our behalf.</li>
+  <li><strong>Account information.</strong> When you create an account or sign in, we collect information such as your email address, nickname, authentication provider, and Firebase user ID. If you use email/password sign-in, your credentials are processed by Firebase Authentication on our behalf. On iOS, sign-in is offered through <strong>Sign in with Apple</strong>; if you choose Apple's "Hide My Email" option, we receive an Apple-generated private relay email address instead of your real address, and we use that relay address to identify your account. On Android, sign-in is offered through Google. We only receive the basic profile information the provider returns (such as an email address or relay address and a user identifier).</li>
   <li><strong>Profile and settings.</strong> We store settings such as your interface language, learning language, daily goal, theme preference, reminder time, and related profile preferences.</li>
   <li><strong>Social profile and friends data.</strong> If you use social features, we store your public profile — your nickname, avatar selection, profile wall layout, and the word cards you choose to showcase — together with learning statistics shown on it (such as your level, learning language, streak, weekly and total XP, words learned, and cards collected). We also store your friends list, friend requests, and invite codes you create or redeem. See Section 6 for what is visible to other users.</li>
   <li><strong>Learning and progress data.</strong> We store data needed to run the App, such as your words, topics, review history, streaks, achievements, quests, gem or emerald balance, virtual items, premium status, word cards and collection data (including card rarity, discovery numbers, chests opened, upgrade shards, and card upgrades), and similar progress data.</li>
   <li><strong>Imported or pasted content.</strong> If you paste text or choose files to import (such as .txt, .csv, .doc, or .docx), the App reads that content so it can extract words, build learning lists, or generate study content from it.</li>
   <li><strong>AI and translation requests.</strong> When you use AI-generated features or translation features, the App sends the text you choose to process (for example words, phrases, topic names, or imported snippets) together with language settings. We do not intentionally include profile fields such as your email address or nickname in those content prompts.</li>
-  <li><strong>Microphone input.</strong> If you use speaking practice, the App accesses your microphone while that feature is active. Seed does not store raw audio recordings or upload raw microphone recordings to our own servers. Speech recognition may be handled by your device or platform speech-recognition provider under that provider's own terms.</li>
+  <li><strong>Microphone input.</strong> If you use speaking practice, the App accesses your microphone while that feature is active. Seed does not store raw audio recordings or upload raw microphone recordings to our own servers. Speech recognition is handled by your device or platform speech-recognition provider under that provider's own terms — on iOS this is Apple's speech recognition, which may send audio to Apple to perform the recognition; on Android it is the device's speech-recognition service.</li>
   <li><strong>Support requests.</strong> If you contact us, we collect the information you include in your message.</li>
 </ul>
 
@@ -66,8 +66,8 @@
 <ul>
   <li><strong>Device and app information.</strong> We may collect device model, OS version, app version, locale, timezone, and connectivity-related information needed to run the App and keep data in sync.</li>
   <li><strong>Crash and diagnostics data.</strong> Firebase Crashlytics collects crash reports and related diagnostics such as stack traces, device model, OS version, and app version.</li>
-  <li><strong>Notification data.</strong> If you enable reminders or notifications, we may store your Firebase Cloud Messaging token, timezone, and reminder settings so we can send reminder notifications.</li>
-  <li><strong>Advertising and consent data.</strong> If ads are shown, Google AdMob and Google's consent tools may process your advertising ID, consent choices, and ad interaction data. Google may also infer approximate location from IP address for ads, fraud prevention, or legal compliance.</li>
+  <li><strong>Notification data.</strong> If you enable reminders or notifications, we may store your Firebase Cloud Messaging token, timezone, and reminder settings so we can send reminder notifications. Push notifications are delivered through Firebase Cloud Messaging, which uses the Apple Push Notification service (APNs) on iOS and Google's messaging service on Android.</li>
+  <li><strong>Advertising and consent data.</strong> If ads are shown, Google AdMob and Google's consent tools may process your advertising ID, consent choices, and ad interaction data. Google may also infer approximate location from IP address for ads, fraud prevention, or legal compliance. On iOS, the App uses Apple's App Tracking Transparency framework: it asks for your permission before accessing the device advertising identifier (IDFA) for cross-app tracking, and you can decline or change this at any time in iOS Settings. Where tracking is not permitted, ads may still be shown using Apple's SKAdNetwork for privacy-preserving, non-personalized ad attribution.</li>
   <li><strong>Purchase and virtual currency data.</strong> If you make purchases or use virtual currency features, RevenueCat and Google Play may process your app user ID, product identifiers, entitlement status, purchase token, transaction status, and related purchase history. RevenueCat may also store virtual currency information, such as gem balances and transaction history, as part of your RevenueCat customer profile. We do not receive your full payment card details.</li>
   <li><strong>Card discovery counters.</strong> Word-card discovery numbers are based on a global counter of how many users have collected a given word's card. This counter contains only word identifiers and counts — it does not include your name, nickname, email, or other personal information.</li>
 </ul>
@@ -95,15 +95,27 @@
       <td><a href="https://policies.google.com/privacy">policies.google.com/privacy</a></td>
     </tr>
     <tr>
+      <td>Sign in with Apple (iOS)</td>
+      <td>Sign in on iOS, including the optional Hide My Email private relay</td>
+      <td>Apple user identifier, email address or Apple private relay email</td>
+      <td><a href="https://www.apple.com/legal/privacy/">apple.com/legal/privacy</a></td>
+    </tr>
+    <tr>
+      <td>Google Sign-In (Android)</td>
+      <td>Sign in on Android</td>
+      <td>Google account identifier and email address</td>
+      <td><a href="https://policies.google.com/privacy">policies.google.com/privacy</a></td>
+    </tr>
+    <tr>
       <td>Cloud Firestore</td>
       <td>Store and sync profiles, settings, progress, word cards, social profiles, friends, reminder preferences, and app state</td>
       <td>Profile data, learning progress, word-card collection, public social profile, friends data, settings, reminder data</td>
       <td><a href="https://policies.google.com/privacy">policies.google.com/privacy</a></td>
     </tr>
     <tr>
-      <td>Firebase Cloud Messaging</td>
+      <td>Firebase Cloud Messaging (with Apple Push Notification service on iOS)</td>
       <td>Deliver push reminders and notifications</td>
-      <td>Device/app instance data, FCM token, notification delivery data</td>
+      <td>Device/app instance data, FCM token, APNs device token on iOS, notification delivery data</td>
       <td><a href="https://firebase.google.com/support/privacy/">firebase.google.com/support/privacy</a></td>
     </tr>
     <tr>
@@ -119,7 +131,7 @@
       <td><a href="https://firebase.google.com/support/privacy/">firebase.google.com/support/privacy</a></td>
     </tr>
     <tr>
-      <td>Firebase App Check / Google Play Integrity</td>
+      <td>Firebase App Check (Google Play Integrity on Android, Apple App Attest / DeviceCheck on iOS)</td>
       <td>Protect backend services from abuse and unauthorized app access</td>
       <td>App/device attestation and integrity signals</td>
       <td><a href="https://firebase.google.com/docs/app-check">firebase.google.com/docs/app-check</a></td>
@@ -144,8 +156,8 @@
     </tr>
     <tr>
       <td>Google AdMob</td>
-      <td>Show rewarded ads and related ad services</td>
-      <td>Advertising ID, ad interaction data, approximate location inferred by Google from IP</td>
+      <td>Show rewarded ads and related ad services. On iOS, ad attribution may use Apple's SKAdNetwork, and the advertising identifier (IDFA) is used only with your App Tracking Transparency permission</td>
+      <td>Advertising ID / IDFA (iOS, with permission), SKAdNetwork attribution data, ad interaction data, approximate location inferred by Google from IP</td>
       <td><a href="https://support.google.com/admob/answer/6128543">support.google.com/admob</a></td>
     </tr>
     <tr>
@@ -165,6 +177,12 @@
       <td>Process Android purchases</td>
       <td>Purchase token, product ID, transaction status</td>
       <td><a href="https://policies.google.com/privacy">policies.google.com/privacy</a></td>
+    </tr>
+    <tr>
+      <td>Apple App Store / StoreKit (iOS)</td>
+      <td>Process iOS in-app purchases and subscriptions</td>
+      <td>App Store transaction identifier, product ID, subscription status</td>
+      <td><a href="https://www.apple.com/legal/privacy/">apple.com/legal/privacy</a></td>
     </tr>
     <tr>
       <td>Google Fonts</td>
@@ -204,16 +222,19 @@
 
 <h2>4. Permissions the App Requests</h2>
 
+<p>Depending on your platform (Android or iOS) and version, Seed may request the following permissions. Each is requested only when relevant, and you can decline most of them and still use the core App.</p>
 <ul>
-  <li><strong>Internet</strong> — to connect to Firebase, translation services, image services, ads, and purchase services.</li>
-  <li><strong>Access network state</strong> — to adapt behavior based on connectivity.</li>
-  <li><strong>Post notifications</strong> — to send reminders and other notifications. You can deny this and still use the core App.</li>
-  <li><strong>Record audio</strong> — only when you use the speaking practice feature.</li>
-  <li><strong>Vibrate</strong> — for optional haptic feedback during interactions such as opening chests.</li>
-  <li><strong>Billing</strong> — to support purchases and subscriptions.</li>
+  <li><strong>Internet &amp; network state</strong> — to connect to Firebase, translation services, image services, ads, and purchase services, and to adapt behavior based on connectivity.</li>
+  <li><strong>Notifications</strong> — to send reminders and other notifications. On Android 13+ and on iOS the App asks for your permission first; you can deny this and still use the core App.</li>
+  <li><strong>Microphone</strong> — only when you use the speaking practice feature.</li>
+  <li><strong>Speech recognition (iOS)</strong> — on iOS, speaking practice also requests permission to use Apple's speech recognition to check your pronunciation.</li>
+  <li><strong>Photo library (Save / Add)</strong> — only when you choose to save or share an image of your progress, such as a word card or your profile.</li>
+  <li><strong>Tracking (iOS App Tracking Transparency)</strong> — on iOS, the App asks for permission before using the advertising identifier (IDFA) for ad personalization. You can decline, and you can change this at any time in iOS Settings.</li>
+  <li><strong>Haptics / Vibrate</strong> — for optional haptic feedback during interactions such as opening chests.</li>
+  <li><strong>Billing / In-app purchase</strong> — to support purchases and subscriptions through the app store.</li>
 </ul>
 
-<p>The Android build may also include supporting capabilities used by notification, messaging, and ads SDKs, such as wake locks, cloud-messaging delivery, and ad ID access. Seed does <strong>not</strong> request precise location permission.</p>
+<p>Each platform build may also include supporting capabilities used by the notification, messaging, and ads SDKs, such as background notification delivery, wake locks (Android), and advertising-identifier access. Seed does <strong>not</strong> request precise location permission on either platform.</p>
 
 <hr>
 
@@ -292,7 +313,7 @@
 
 <h2>10. Children's Privacy</h2>
 
-<p>Seed is intended for users aged 13 and above. We do not knowingly collect personal information from children under 13. Our app's target audience on Google Play is set to ages 13 and above. If you believe a child under 13 has provided personal data to us, please contact us and we will work to delete it promptly.</p>
+<p>Seed is intended for users aged 13 and above. We do not knowingly collect personal information from children under 13. Our app's target audience on Google Play is set to ages 13 and above, and the App's App Store age rating is set accordingly. If you believe a child under 13 has provided personal data to us, please contact us and we will work to delete it promptly.</p>
 
 <hr>
 
@@ -327,7 +348,7 @@
 <p><strong>Email:</strong> alexeyg2006@gmail.com</p>
 <p>We aim to respond within 7 business days.</p>
 
-<p class="updated">This policy was last updated on June 12, 2026.</p>
+<p class="updated">This policy was last updated on June 21, 2026.</p>
 
 </body>
 </html>
