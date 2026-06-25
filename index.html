@@ -41,7 +41,7 @@
 <body>
 
 <h1>Privacy Policy for Seed</h1>
-<p class="meta"><strong>Last updated: June 22, 2026</strong></p>
+<p class="meta"><strong>Last updated: June 25, 2026</strong></p>
 
 <p>This Privacy Policy explains how the mobile application "Seed" (the "App"), provided by <strong>Alex Goncharov</strong> ("we", "us", "our"), collects, uses, stores, and shares information when you use the App on Android and iOS.</p>
 <p><strong>Contact:</strong> alexeyg2006@gmail.com</p>
@@ -67,7 +67,7 @@
   <li><strong>Device and app information.</strong> We may collect device model, OS version, app version, locale, timezone, and connectivity-related information needed to run the App and keep data in sync.</li>
   <li><strong>Crash and diagnostics data.</strong> Firebase Crashlytics collects crash reports and related diagnostics such as stack traces, device model, OS version, and app version.</li>
   <li><strong>Notification data.</strong> If you enable reminders or notifications, we may store your Firebase Cloud Messaging token, timezone, and reminder settings so we can send reminder notifications. Push notifications are delivered through Firebase Cloud Messaging, which uses the Apple Push Notification service (APNs) on iOS and Google's messaging service on Android.</li>
-  <li><strong>Advertising and consent data.</strong> If ads are shown, Google AdMob and Google's consent tools may process advertising identifiers, consent choices, and ad interaction data. Google may also infer approximate location from IP address for ads, fraud prevention, or legal compliance. On iOS, Seed does <strong>not</strong> track you across other companies' apps or websites and does <strong>not</strong> use the device advertising identifier (IDFA) for that purpose; iOS ads are non-personalized and use Apple's SKAdNetwork for privacy-preserving install attribution only. On Android, where you consent, ads may be personalized using the device advertising ID; you can reset that ID or opt out of ad personalization in your device settings.</li>
+  <li><strong>Advertising and consent data.</strong> If ads are shown, Google AdMob and Google's consent tools may process advertising identifiers, consent choices, and ad interaction data. Google may also infer approximate location from IP address for ads, fraud prevention, or legal compliance. On iOS, the App asks for your permission through Apple's App Tracking Transparency (ATT) framework before using the device advertising identifier (IDFA) to personalize ads or measure ad performance across other companies' apps and websites. If you grant permission, ads may be personalized using the IDFA; if you decline, iOS ads are non-personalized and use Apple's SKAdNetwork for privacy-preserving attribution only. On Android, where you consent, ads may be personalized using the device advertising ID. You can change your ATT choice in iOS Settings at any time, and you can reset your advertising ID or opt out of ad personalization in your device settings.</li>
   <li><strong>Purchase and virtual currency data.</strong> If you make purchases or use virtual currency features, RevenueCat and Google Play may process your app user ID, product identifiers, entitlement status, purchase token, transaction status, and related purchase history. RevenueCat may also store virtual currency information, such as gem balances and transaction history, as part of your RevenueCat customer profile. We do not receive your full payment card details.</li>
   <li><strong>Card discovery counters.</strong> Word-card discovery numbers are based on a global counter of how many users have collected a given word's card. This counter contains only word identifiers and counts — it does not include your name, nickname, email, or other personal information.</li>
 </ul>
@@ -156,8 +156,8 @@
     </tr>
     <tr>
       <td>Google AdMob</td>
-      <td>Show rewarded ads. iOS ads are non-personalized and use Apple's SKAdNetwork for attribution; Android ads may be personalized with your consent</td>
-      <td>Advertising ID (Android), SKAdNetwork attribution data (iOS), ad interaction data, approximate location inferred by Google from IP</td>
+      <td>Show rewarded ads. With your App Tracking Transparency permission, iOS ads may be personalized using the IDFA; otherwise iOS ads are non-personalized and use Apple's SKAdNetwork for attribution. Android ads may be personalized with your consent</td>
+      <td>Advertising identifier / IDFA (iOS, with your permission), Advertising ID (Android), SKAdNetwork attribution data (iOS), ad interaction data, approximate location inferred by Google from IP</td>
       <td><a href="https://support.google.com/admob/answer/6128543">support.google.com/admob</a></td>
     </tr>
     <tr>
@@ -231,6 +231,7 @@
   <li><strong>Photo library (Save / Add)</strong> — only when you choose to save or share an image of your progress, such as a word card or your profile.</li>
   <li><strong>Haptics / Vibrate</strong> — for optional haptic feedback during interactions such as opening chests.</li>
   <li><strong>Billing / In-app purchase</strong> — to support purchases and subscriptions through the app store.</li>
+  <li><strong>Tracking (App Tracking Transparency, iOS)</strong> — on iOS, the App asks for permission to track before using the advertising identifier (IDFA) to personalize ads. You can decline and still use the App; iOS ads will then be non-personalized.</li>
 </ul>
 
 <p>Each platform build may also include supporting capabilities used by the notification, messaging, and ads SDKs, such as background notification delivery, wake locks (Android), and advertising-identifier access. Seed does <strong>not</strong> request precise location permission on either platform.</p>
@@ -270,7 +271,7 @@
 <p>Depending on where you live, you may have rights to access, correct, export, delete, or restrict the use of your personal data, and to withdraw consent for optional processing.</p>
 <ul>
   <li><strong>Manage notifications</strong> — you can change notification permission in your device settings.</li>
-  <li><strong>Manage ad settings</strong> — you can reset your advertising ID and manage ad-related settings on your device.</li>
+  <li><strong>Manage ad settings</strong> — on iOS you can change your App Tracking Transparency choice in Settings → Privacy &amp; Security → Tracking; on any device you can reset your advertising ID and manage ad-related settings.</li>
   <li><strong>Manage your public profile</strong> — you can edit your nickname, avatar, wall, and showcased cards in the App at any time.</li>
   <li><strong>Delete your account in-app</strong> — use <strong>Settings → Delete Account</strong>.</li>
   <li><strong>Contact us</strong> — email <strong>alexeyg2006@gmail.com</strong> to request access, correction, export, or deletion of your data.</li>
